@@ -1,0 +1,49 @@
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  box-shadow: 0 4px 2px -1px rgb(66, 66, 66);
+}
+.header-items{
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu{
+  margin: 0px 15% 0px 0px;
+  padding: 0;
+}
+.menu-item{
+  list-style-type: none;
+  display: inline;
+  margin: 0;
+  padding: 11px;
+  font-size: 20px;
+  font-family: 'Lora',serif;
+}
+.menu-item:hover{
+  cursor: pointer;
+  background-color: rgba(216, 98, 2,0.8);;
+}
+.logo{
+  font-family: 'Indie Flower', cursive;
+  font-size: 30px;
+  font-weight: 900;
+  margin: 0px 0px 0px 15%;
+  text-align: center;
+}
+.logo:hover{
+  animation: lightSpeedOut ease-in 1s both infinite;
+}
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+    }
+    100% {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+    }
+} 
