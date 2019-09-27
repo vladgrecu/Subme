@@ -6,7 +6,6 @@
   box-shadow: 0 4px 2px -1px rgb(66, 66, 66);
 }
 .header-items{
-  color: #fff;
   font-weight: 500;
   display: flex;
   justify-content: space-between;
@@ -17,8 +16,8 @@
   padding: 0;
 }
 .menu-item{
-  list-style-type: none;
-  display: inline;
+  text-decoration: none;
+  color: #fff;
   margin: 0;
   padding: 11px;
   font-size: 20px;
@@ -29,6 +28,7 @@
   background-color: rgba(216, 98, 2,0.8);;
 }
 .logo{
+  color: #fff;
   font-family: 'Indie Flower', cursive;
   font-size: 30px;
   font-weight: 900;

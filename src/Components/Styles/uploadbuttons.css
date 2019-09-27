@@ -25,6 +25,7 @@ body{
   border-radius: 5px;
   background-color: rgb(65, 65, 65);
   text-align: center;
+  text-decoration: none;
   margin: 10px;
   box-shadow: 10px 11px 5px -4px rgba(167, 167, 167, 0.5);
 }
@@ -45,7 +46,7 @@ body{
   padding: 20px 0;
 }
 .buttonText{
-  margin: 10px 2px;
+  padding: 10px 2px;
   color: white;
   font-size: 1em;
 }

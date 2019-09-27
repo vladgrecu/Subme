@@ -7,17 +7,12 @@ const Navbar= () => {
     <div className="navbar">
       <div className="header-items">
         <div className="logo">Sub.me [...]</div>
-        <ul className="menu">
-          <Link style={{ textDecoration: 'none', color: 'white' }} to="/">
-            <li className="menu-item">Home</li>
-          </Link>
-          <Link style={{ textDecoration: 'none', color: 'white' }} to="/FAQ">
-            <li className="menu-item">FAQ</li>
-          </Link>
-        </ul>
+        <div className="menu">
+          <Link className="menu-item" to="/">Home</Link>
+          <Link className="menu-item" to="/FAQ">FAQ</Link>
+        </div>
       </div>
     </div>
   )
 }
-
 export default Navbar

@@ -1,0 +1,11 @@
+.fromLanguage , .toLanguage{
+  width: 25%;
+  margin: 50px;
+}
+.upload-container{
+  height: 300px;
+  border-radius: 10px;
+}
+.selectTitle{
+  color: #fff;
+}
