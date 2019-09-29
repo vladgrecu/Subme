@@ -1,11 +1,45 @@
 .fromLanguage , .toLanguage{
-  width: 25%;
-  margin: 50px;
+  width: 10%;
 }
 .upload-container{
-  height: 300px;
-  border-radius: 10px;
+  margin: auto;
+  background-color: rgb(222, 228, 228);
+  text-align: center;
+  box-shadow: 2px 4px 2px -1px gray;
+  font-family: sans-serif;
+  width: 90%;
 }
 .selectTitle{
   color: #fff;
+}
+
+.fileUpload{
+  /* border: 1px dashed rgba(216, 98, 2,1); */
+  width: 330px;
+  margin: 5px auto;
+  padding: 50px 0;
+}
+.file{
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+.file-input{
+  background-color: #fff;
+  border: 1px solid rgba(216, 98, 2,0.8);
+  margin: 5px;
+}
+.btnSubmit{
+  padding: 10px;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: rgb(65, 65, 65);
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  margin: 10px;
+  box-shadow: 10px 11px 5px -4px rgba(167, 167, 167, 0.5);
+}
+.btnSubmit:hover{
+  background-color: rgba(216, 98, 2,0.8);
 }

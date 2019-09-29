@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import Select from 'react-select-v2';
+import HowToUse from './HowToUse'
 import './Styles/uploadpage.css'
+import FileUpload from './FileUpload';
 
 class UploadPage extends Component{
   constructor(){
     super()
+
     this.state = {
       transcribeLang: [],
       translateLang: [],
@@ -30,32 +33,32 @@ class UploadPage extends Component{
       this.setState({translateLang: resultTo});
     })
   }
+
   handleChangeFrom = (selectedOption) => {
     this.setState({selectedOptionFrom: selectedOption.value});
-    console.log(selectedOption.value);
   }
+
   handleChangeTo = (selectedOption) =>{
     this.setState({selectedOptionTo: selectedOption.value})
-    console.log(selectedOption.value);
   }
+  
   render(){
-        const langFrom = this.state.transcribeLang.map(option => ({
-          label: option[0],
-          value: option[1]
-        }))
-        const langTo = this.state.translateLang.map(option => ({
-          label: option[0],
-          value: option[1]
-        }))
+    const langFrom = this.state.transcribeLang.map(option => ({
+      label: option[0],
+      value: option[1]
+    }))
+    const langTo = this.state.translateLang.map(option => ({
+      label: option[0],
+      value: option[1]
+    }))
     return(
       <React.Fragment>
         <div className="content">
-          <div className="info-container upload-container">
-            <p>Select File: <input type='file'/> 
-            <input type='button' id='_submit' value='Upload!'/></p>
+          <div className="upload-container">
+            <h2>Here is where the magic happens</h2>
             <div className="link-container">
-              <div className="button">
-                <h3 className="selectTitle">Translate From:</h3> 
+              <div className="button fromLanguage">
+                <h3 className="selectTitle">Input Language:</h3> 
                 <Select 
                   options={langFrom}
                   value={this.selectedOptionFrom}
@@ -63,8 +66,8 @@ class UploadPage extends Component{
                   placeholder="Select Language"
                 />
               </div>
-              <div className="button">
-                <h3 className="selectTitle">To</h3> 
+              <div className="button toLanguage">
+                <h3 className="selectTitle">Output Language</h3> 
                 <Select 
                   options={langTo}
                   value={this.selectedOptionTo}
@@ -73,7 +76,9 @@ class UploadPage extends Component{
                 />
               </div>
             </div>
+          <FileUpload props={this.state} />
           </div>
+          <HowToUse/>
         </div>
       </React.Fragment>
     )

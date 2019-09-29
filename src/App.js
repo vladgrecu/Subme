@@ -4,11 +4,10 @@ import Navbar from './Components/Navbar';
 import UploadButtons from './Components/UploadButtons';
 import HowToUse from './Components/HowToUse';
 import Faq from './Components/Faq';
-import UploadPage from './Components/UploadPage'
+import UploadPage from './Components/UploadPage';
 import './App.css';
 
 class App extends Component {
-  state ={}
   render(){
     return(
       <Router>
