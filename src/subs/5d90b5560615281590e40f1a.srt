@@ -1,0 +1,95 @@
+1
+00:00:02,500 --> 00:00:06,500
+Welcome to section 6 in the section.
+We're going to take a quick break
+
+2
+00:00:06,900 --> 00:00:10,900
+from exploring new react features to
+talk about a little bit of tooling
+
+3
+00:00:11,200 --> 00:00:15,200
+and the tool we're going to cover in
+this section is webpack webpack is
+
+4
+00:00:15,800 --> 00:00:19,800
+an asset bundle or it's going to
+combine all of the assets that make
+
+5
+00:00:19,850 --> 00:00:23,350
+up our application with all of the
+assets needed from third-party
+
+6
+00:00:23,400 --> 00:00:26,650
+libraries.
+And this is going to allow us to do
+
+7
+00:00:26,700 --> 00:00:30,700
+a couple of exciting thinks it's
+going to allow us to take advantage
+
+8
+00:00:30,750 --> 00:00:33,750
+of third-party libraries in our
+projects to remember earlier.
+
+9
+00:00:34,300 --> 00:00:38,300
+I talked about that vast ecosystem
+of libraries that you can use the
+
+10
+00:00:38,800 --> 00:00:41,300
+solve common problems like date
+Pickers or drag-and-drop.
+
+11
+00:00:42,000 --> 00:00:46,000
+We're now actually going to be able
+to start to take advantage of that.
+
+12
+00:00:46,050 --> 00:00:50,050
+The second great thing we're going
+to be able to do with webpack is
+
+13
+00:00:50,100 --> 00:00:54,100
+we're going to be able to take our
+own application code and break it up
+
+14
+00:00:54,150 --> 00:00:57,650
+across multiple files.
+So we want to be in a situation
+
+15
+00:00:57,700 --> 00:01:01,700
+where each component lives in its
+own file Soar application is easier
+
+16
+00:01:02,100 --> 00:01:05,100
+to man.
+Now the sections going to start off
+
+17
+00:01:05,150 --> 00:01:09,150
+with a basic introduction of webpack
+along the way will be configuring it
+
+18
+00:01:09,600 --> 00:01:12,100
+and exploring all of the features it
+provides.
+
+19
+00:01:12,500 --> 00:01:14,500
+All right, let's Jump Right In.
+
+
