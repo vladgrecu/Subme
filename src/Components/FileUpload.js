@@ -9,7 +9,6 @@ const FileUpload = ({props}) => {
   
   const [file, setFile] = useState('');
   const [filename, setFileName] = useState('No file selected');
-  const [uploadedFile, setUploadedFile] = useState({});
   const [message, setMessage] = useState('');
   const [uploadPercentage, setUploadPercentage] = useState(0);
 
@@ -43,13 +42,11 @@ const FileUpload = ({props}) => {
           },20000)
         }
       });
-      const {fileName, filePath} = response.data;
-      console.log(response.data);
-      setUploadedFile({fileName, filePath});
-
+      console.log(response);
       setMessage('File Uploaded');
       
-    }catch(error){
+    }
+    catch(error){
       if(error.response.status === 404){
         setMessage('There was a problem with the server');
       }else {
