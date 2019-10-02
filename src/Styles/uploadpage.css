@@ -43,3 +43,12 @@
 .btnSubmit:hover{
   background-color: rgba(216, 98, 2,0.8);
 }
+.serverMessage{
+  background-color: rgba(216, 98, 2,0.8);
+  color: #fff;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 20px auto;
+}

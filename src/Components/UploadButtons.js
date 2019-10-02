@@ -1,8 +1,8 @@
 import React from 'react';
-import fromDevice from './Photo/fromDevice.png';
-import videoIcon from './Photo/videoicon.jpg';
+import fromDevice from '../Photo/fromDevice.png';
+import videoIcon from '../Photo/videoicon.jpg';
 import {Link} from 'react-router-dom';
-import './Styles/uploadbuttons.css'
+import '../Styles/uploadbuttons.css'
 
 const UploadButtons= () => {
   return (

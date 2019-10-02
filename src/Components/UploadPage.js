@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import Select from 'react-select-v2';
 import HowToUse from './HowToUse'
-import './Styles/uploadpage.css'
+import '../Styles/uploadpage.css'
 import FileUpload from './FileUpload';
 
 class UploadPage extends Component{
   constructor(){
     super()
-
     this.state = {
       transcribeLang: [],
       translateLang: [],
@@ -17,8 +16,8 @@ class UploadPage extends Component{
   }
 
   componentDidMount(){
-    fetch('http://localhost:3000/languages').then(responsee=>{
-      return responsee.json();
+    fetch('http://localhost:3000/languages').then(response=>{
+      return response.json();
     })
     .then(languages => {
       let resultFrom = [];
@@ -55,7 +54,7 @@ class UploadPage extends Component{
       <React.Fragment>
         <div className="content">
           <div className="upload-container">
-            <h2>Here is where the magic happens</h2>
+            <h2 style={{color:'gray'}}>Here is where the magic happens</h2>
             <div className="link-container">
               <div className="button fromLanguage">
                 <h3 className="selectTitle">Input Language:</h3> 

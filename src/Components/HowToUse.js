@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUpload, faKey, faClosedCaptioning, faCog } from '@fortawesome/free-solid-svg-icons';
-import './Styles/howtouse.css'
+import '../Styles/howtouse.css'
 
 const HowToUse= () => {
   return (
