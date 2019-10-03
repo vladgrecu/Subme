@@ -19,7 +19,7 @@ body{
 }
 .button{
   width: 25%;
-  min-width: 300px;
+  min-width: 250px;
   max-width: 400px;
   height: auto;
   border-radius: 5px;

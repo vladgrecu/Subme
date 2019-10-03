@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import Message from './Message';
-import Progress from './Progress';
+import Overlay from './Overlay';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileUpload } from '@fortawesome/free-solid-svg-icons';
 
 const FileUpload = ({props}) => {
-  
+  const [overlay, setOverlay] = useState(false);
   const [file, setFile] = useState('');
   const [filename, setFileName] = useState('No file selected');
   const [message, setMessage] = useState('');
@@ -21,8 +21,8 @@ const FileUpload = ({props}) => {
     event.preventDefault();
     
     console.log('File: ',file);
-    console.log("From Selection",props.selectedOptionFrom);
-    console.log("From Selection",props.selectedOptionTo);
+    console.log("From Language",props.selectedOptionFrom);
+    console.log("To Language",props.selectedOptionTo);
 
     const formData = new FormData();
     formData.append('fromlang',`${props.selectedOptionFrom}`);
@@ -30,40 +30,54 @@ const FileUpload = ({props}) => {
     formData.append('upload',file);
 
     try{
+      if(file.length === 0){
+        setMessage(`Please select a file`);
+        return
+      };
+      setOverlay(true);
+      document.body.style.overflow = 'hidden';
       const response = await axios.post(`http://localhost:3000/upload`, formData, {
         headers:{
           'Content-Type': 'multipart/form-data'
         },
         onUploadProgress: progressEvent => {
           setUploadPercentage(parseInt(Math.round((progressEvent.loaded * 100) / progressEvent.total)))
-          setTimeout(() => {
-            setUploadPercentage(0);
-            setMessage('Ready to receive your file')
-          },20000)
         }
       });
-      console.log(response);
-      setMessage('File Uploaded');
+      
+      console.log("Response",response); 
+      setMessage('Processing File');
+      const data = response.data;
+      const downloadId = data.success;
+      const downloadCheck = setInterval(async () => {
+        const response = await axios.get(`http://localhost:3000/status/${downloadId}`);
+        const done = response.data.done;
+        if(done){
+          setOverlay(false);
+          document.body.style.overflow = 'auto';
+          window.location = `http://localhost:3000/download/${downloadId}`;
+          clearInterval(downloadCheck);
+        }
+      }, 2000); 
       
     }
     catch(error){
-      if(error.response.status === 404){
-        setMessage('There was a problem with the server');
-      }else {
-        setMessage(`${error.response.data.error}`);
-      }
-      console.log(error)
+      setOverlay(false);
+      document.body.style.overflow = 'auto';
+      console.log(Object.entries(error));
+      setMessage(`${error.response.data.error}`);
+      setUploadPercentage(0);
     }
     
   }
   return(
     <React.Fragment>
       {message ? <Message msg={message}/> : null}
+      {overlay ? <Overlay percentage={uploadPercentage} message={message}/> : null}
       <form onSubmit={onSubmit} className="fileUpload">
       <FontAwesomeIcon icon={faFileUpload} className="bounceUp" size="4x" style={{ color: 'rgba(216, 98, 2,0.8)' }} />
         <div className="file">{filename}
           <input id="file" type="file" className="file-input"style={{visibility:"hidden"}} onChange={onChange}/>
-          <Progress percentage={uploadPercentage}/>
           <label htmlFor="file" className="btnSubmit" style={{fontSize:"13px"}}>Select File</label>
           <input type="submit" className="btnSubmit"/>
         </div>
