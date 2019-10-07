@@ -48,7 +48,7 @@
   top: 20%;
   left: calc(50% - 160px);
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 /* .overlayItems{
   position: absolute;
@@ -56,5 +56,4 @@
   top: 20%;
   left: calc(50% - 160px);
   color: white;
-  user-select: none;
 } */

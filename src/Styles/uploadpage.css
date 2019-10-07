@@ -15,7 +15,8 @@
 
 .fileUpload{
   /* border: 1px dashed rgba(216, 98, 2,1); */
-  width: 330px;
+  min-width: 300px;
+  max-width: 350px;
   margin: 5px auto;
   padding: 50px 0;
 }
@@ -44,12 +45,24 @@
   background-color: rgba(216, 98, 2,0.8);
 }
 .serverMessage{
-  background-color: rgba(216, 98, 2,0.8);
+  background-color: rgba(105, 216, 2, 0.8);
   color: #fff;
   border-radius: 2px;
   display: flex;
   justify-content: center;
-  width: 40%;
+  min-width: 300px;
+  max-width: 350px;
+  margin: 20px auto;
+  border-radius: 2px;
+}
+.serverMessageFailed{
+  background-color: rgba(216, 52, 2, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+  max-width: 350px;
   margin: 20px auto;
   border-radius: 2px;
 }

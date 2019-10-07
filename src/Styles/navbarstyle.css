@@ -1,8 +1,12 @@
+body{
+  margin: 0;
+  user-select: none;
+}
 .navbar{
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: black;
+  background-color: rgb(37, 37, 37);
   box-shadow: 0 4px 2px -1px rgb(66, 66, 66);
   z-index: 100;
 }
@@ -30,6 +34,7 @@
 }
 .logo{
   color: #fff;
+  text-decoration: none;
   font-family: 'Indie Flower', cursive;
   font-size: 30px;
   font-weight: 900;

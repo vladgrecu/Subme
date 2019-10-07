@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Message = ({msg}) => {
+const Message = ({msg, backgroundColor}) => {
   return (
-    <div className="serverMessage">
+    <div className={backgroundColor}>
       {msg}
     </div>
   )

@@ -10,6 +10,7 @@ const FileUpload = ({props}) => {
   const [file, setFile] = useState('');
   const [filename, setFileName] = useState('No file selected');
   const [message, setMessage] = useState('');
+  const [backgroundColor, setBackgroundColor] = useState('serverMessage');
   const [uploadPercentage, setUploadPercentage] = useState(0);
 
   const onChange = event => {
@@ -32,6 +33,7 @@ const FileUpload = ({props}) => {
     try{
       if(file.length === 0){
         setMessage(`Please select a file`);
+        setBackgroundColor('serverMessageFailed');
         return
       };
       setOverlay(true);
@@ -64,15 +66,20 @@ const FileUpload = ({props}) => {
     catch(error){
       setOverlay(false);
       document.body.style.overflow = 'auto';
+      setBackgroundColor('serverMessageFailed');
       console.log(Object.entries(error));
-      setMessage(`${error.response.data.error}`);
+      if(error.response.status===404){
+        setMessage('Not connected to server');
+      } else {
+        setMessage(`${error.response.data.error}`);
+      }
       setUploadPercentage(0);
     }
     
   }
   return(
     <React.Fragment>
-      {message ? <Message msg={message}/> : null}
+      {message ? <Message msg={message} backgroundColor={backgroundColor}/> : null}
       {overlay ? <Overlay percentage={uploadPercentage} message={message}/> : null}
       <form onSubmit={onSubmit} className="fileUpload">
       <FontAwesomeIcon icon={faFileUpload} className="bounceUp" size="4x" style={{ color: 'rgba(216, 98, 2,0.8)' }} />
