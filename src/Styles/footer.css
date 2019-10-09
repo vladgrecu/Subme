@@ -1,0 +1,31 @@
+.footer-container{
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px -0px 1px 1px rgb(168, 168, 168);
+  color: #fff;
+  position: absolute;
+  bottom: -40px;
+}
+.copyright{
+  text-align: center;
+  padding-bottom: 5px;
+  font-size: 0.7em;
+  margin: 5px 0px;
+}
+.site-map{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.site-map *{
+  text-align: center;
+  font-family: serif;
+  font-size: 0.9em;
+  margin: 10px 5px;
+  padding: 0px 5px;
+}
+.site-map *:hover{
+  cursor: pointer;
+  background-color: rgba(216, 98, 2,0.8);
+}

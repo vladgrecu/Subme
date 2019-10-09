@@ -1,5 +1,6 @@
 .fromLanguage , .toLanguage{
-  width: 10%;
+  width: 15%;
+  height: 75px;
 }
 .upload-container{
   margin: auto;
@@ -11,11 +12,12 @@
 }
 .selectTitle{
   color: #fff;
+  margin: 10px auto;
 }
 
 .fileUpload{
   /* border: 1px dashed rgba(216, 98, 2,1); */
-  min-width: 300px;
+  /* min-width: 300px; */
   max-width: 350px;
   margin: 5px auto;
   padding: 50px 0;
@@ -23,25 +25,32 @@
 .file{
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 50px;
 }
 .file-input{
-  background-color: #fff;
-  border: 1px solid rgba(216, 98, 2,0.8);
-  margin: 5px;
-}
-.btnSubmit{
   padding: 10px;
-  margin: 15px;
+  border: 0.1px;
   border-radius: 5px;
-  background-color: rgb(65, 65, 65);
+  background-color: rgb(136, 136, 136);
   text-align: center;
-  text-decoration: none;
   color: #fff;
   margin: 10px;
   box-shadow: 10px 11px 5px -4px rgba(167, 167, 167, 0.5);
+  min-width: 150px;
 }
-.btnSubmit:hover{
+.btnSubmit{
+  padding: 15px;
+  border: 0.1px;
+  border-radius: 5px;
+  background-color: rgb(93, 180, 52);
+  text-align: center;
+  color: #fff;
+  margin: 10px;
+  box-shadow: 10px 11px 5px -4px rgba(167, 167, 167, 0.5);
+  min-width: 200px;
+}
+.btnSubmit:hover, .file-input:hover{
   background-color: rgba(216, 98, 2,0.8);
 }
 .serverMessage{

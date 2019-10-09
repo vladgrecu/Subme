@@ -1,9 +1,11 @@
 body{
   background-color: rgb(63, 63, 63);
+  min-height: 100vh;
+  position: relative;
 }
 .content{
   margin: auto;
-  padding-top: 90px;
+  padding-top: 85px;
   background-color:  rgb(95, 95, 95);
   padding-bottom: 90px;
   box-shadow: 0 4px 2px -1px gray;
@@ -21,7 +23,6 @@ body{
   width: 25%;
   min-width: 250px;
   max-width: 400px;
-  height: auto;
   border-radius: 5px;
   background-color: rgb(65, 65, 65);
   text-align: center;
@@ -43,7 +44,7 @@ body{
 .uploadTitle{
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .buttonText{
   padding: 10px 2px;

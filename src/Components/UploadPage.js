@@ -54,7 +54,6 @@ class UploadPage extends Component{
       <React.Fragment>
         <div className="content">
           <div className="upload-container">
-            <h2 style={{color:'gray'}}>Here is where the magic happens</h2>
             <div className="link-container">
               <div className="button fromLanguage">
                 <h3 className="selectTitle">Input Language:</h3> 

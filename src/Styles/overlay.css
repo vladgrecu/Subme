@@ -6,7 +6,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,.8);
   z-index: 101;
 }
 .loading-wheel {
@@ -37,23 +37,20 @@
 }
 .overlayPercentage{
   font-size: 50px;
-  position: absolute;
-  left: calc(50% - 25px);
-  top: 27%;
+  text-align: center;
   color: white;
+  margin: 10px;
 }
 .overlayMsg{
   font-size: 50px;
-  position: absolute;
-  top: 20%;
-  left: calc(50% - 160px);
   text-align: center;
   color: rgb(255, 255, 255);
+  margin: 10px;
 }
-/* .overlayItems{
-  position: absolute;
-  font-size: 50px;
-  top: 20%;
-  left: calc(50% - 160px);
-  color: white;
-} */
+.overlayItems{
+  display: flexbox;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17%;
+}

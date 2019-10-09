@@ -5,6 +5,7 @@ import UploadButtons from '../Components/UploadButtons';
 import HowToUse from '../Components/HowToUse';
 import Faq from './Faq';
 import UploadPage from '../Components/UploadPage';
+import Footer from '../Components/Footer';
 
 class App extends Component {
   render(){
@@ -16,12 +17,12 @@ class App extends Component {
             <React.Fragment>
               <UploadButtons/>
               <HowToUse/>
-              {/* <Footer/> */}
             </React.Fragment>
           )}>          
           </Route>
             <Route path="/FAQ" component={Faq}></Route>
             <Route path="/Upload" component={UploadPage}></Route>
+            <Footer/>
         </React.Fragment>
       </Router>
     )
