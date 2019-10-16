@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-function Faqs({faq, index, toggleFaq}) {
+function Faqs({ faq, index, toggleFaq }) {
   return (
-    <div 
-      className={"faq " + (faq.open ? 'open': '')}
+    <div
+      className={"faq " + (faq.open ? "open" : "")}
       key={index}
       onClick={() => toggleFaq(index)}
     >
@@ -14,7 +14,7 @@ function Faqs({faq, index, toggleFaq}) {
         <span className="faq-text">{faq.answer}</span>
       </div>
     </div>
-  )
+  );
 }
 
 export default Faqs;

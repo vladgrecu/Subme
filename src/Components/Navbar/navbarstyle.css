@@ -1,8 +1,8 @@
-body{
+body {
   margin: 0;
   user-select: none;
 }
-.navbar{
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -10,54 +10,54 @@ body{
   box-shadow: 0 4px 2px -1px rgb(66, 66, 66);
   z-index: 100;
 }
-.navbar-items{
+.navbar-items {
   font-weight: 500;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.menu{
+.menu {
   margin: 0px 15% 0px 0px;
   padding: 0;
 }
-.menu-item{
+.menu-item {
   text-decoration: none;
   color: #fff;
   margin: 0;
   padding: 11px;
   font-size: 18px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.menu-item:hover{
+.menu-item:hover {
   cursor: pointer;
-  background-color: rgba(216, 98, 2,0.8);
+  background-color: rgba(216, 98, 2, 0.8);
 }
-.logo{
+.logo {
   color: #fff;
   text-decoration: none;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   font-size: 30px;
   font-weight: 900;
   margin: 0px 0px 0px 15%;
   text-align: center;
 }
-.logo:hover{
+.logo:hover {
   animation: lightSpeedOut ease-in 1s both infinite;
 }
 @keyframes lightSpeedOut {
   0% {
     opacity: 1;
-    }
-    100% {
+  }
+  100% {
     transform: translate3d(100%, 0, 0) skewX(30deg);
     opacity: 0;
-    }
-} 
-@media screen and (max-width: 400px){
-  .logo{
+  }
+}
+@media screen and (max-width: 400px) {
+  .logo {
     font-size: 22px;
   }
-  .menu-item{
+  .menu-item {
     font-size: 13px;
     padding: 9px;
   }

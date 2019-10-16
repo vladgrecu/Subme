@@ -1,8 +1,9 @@
-.fromLanguage , .toLanguage{
+.fromLanguage,
+.toLanguage {
   width: 15%;
   height: 75px;
 }
-.upload-container{
+.upload-container {
   margin: auto;
   background-color: rgb(222, 228, 228);
   text-align: center;
@@ -10,25 +11,25 @@
   font-family: sans-serif;
   width: 90%;
 }
-.selectTitle{
+.selectTitle {
   color: #fff;
   margin: 10px auto;
 }
 
-.fileUpload{
+.fileUpload {
   /* min-width: 300px; */
   max-width: 350px;
   margin: 5px auto;
   padding: 50px 0;
 }
-.file{
+.file {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 35px;
   /* border: 1px dashed rgba(216, 98, 2,1); */
 }
-.file-input{
+.file-input {
   padding: 10px;
   border: 0.1px;
   border-radius: 5px;
@@ -39,7 +40,7 @@
   box-shadow: 10px 11px 5px -4px rgba(167, 167, 167, 0.5);
   min-width: 150px;
 }
-.btnSubmit{
+.btnSubmit {
   padding: 15px;
   border: 0.1px;
   border-radius: 5px;
@@ -50,10 +51,11 @@
   box-shadow: 10px 11px 5px -4px rgba(167, 167, 167, 0.5);
   min-width: 200px;
 }
-.btnSubmit:hover, .file-input:hover{
-  background-color: rgba(216, 98, 2,0.8);
+.btnSubmit:hover,
+.file-input:hover {
+  background-color: rgba(216, 98, 2, 0.8);
 }
-.serverMessage{
+.serverMessage {
   background-color: rgba(105, 216, 2, 0.8);
   color: #fff;
   border-radius: 2px;
@@ -64,7 +66,7 @@
   margin: 20px auto;
   border-radius: 2px;
 }
-.serverMessageFailed{
+.serverMessageFailed {
   background-color: rgba(216, 52, 2, 0.8);
   color: #fff;
   border-radius: 2px;

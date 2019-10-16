@@ -1,25 +1,25 @@
-body{
+body {
   background-color: rgb(63, 63, 63);
   min-height: 100vh;
   position: relative;
 }
-.content{
+.content {
   margin: auto;
   padding-top: 45px;
-  background-color:  rgb(95, 95, 95);
+  background-color: rgb(95, 95, 95);
   padding-bottom: 50px;
   box-shadow: 0 4px 2px -1px gray;
   font-family: sans-serif;
   width: 90%;
 }
-.link-container{
+.link-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.button{
+.button {
   width: 25%;
   min-width: 250px;
   max-width: 400px;
@@ -30,23 +30,23 @@ body{
   margin: 10px;
   box-shadow: 10px 11px 5px -4px rgba(167, 167, 167, 0.5);
 }
-.button:hover{
-  background-color: rgba(216, 98, 2,0.8);
+.button:hover {
+  background-color: rgba(216, 98, 2, 0.8);
   cursor: pointer;
 }
-.upload{
+.upload {
   margin-top: 10px;
   background-color: #fff;
   border: 1px solid black;
   border-radius: 50%;
   width: 50%;
 }
-.uploadTitle{
+.uploadTitle {
   color: #fff;
   text-align: center;
   padding: 10px 0;
 }
-.buttonText{
+.buttonText {
   padding: 10px 2px;
   color: white;
   font-size: 1em;
