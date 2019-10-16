@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Navbar from '../Components/Navbar';
-import UploadButtons from '../Components/UploadButtons';
-import HowToUse from '../Components/HowToUse';
-import Faq from './Faq';
-import UploadPage from '../Components/UploadPage';
-import Footer from '../Components/Footer';
+import Navbar from '../Components/Navbar/Navbar';
+import UploadButtons from '../Components/UploadButtons/UploadButtons';
+import HowToUse from '../Components/HowToUse/HowToUse';
+import FaqPage from './FaqPage/FaqPage';
+import UploadPage from './UploadPage/UploadPage';
+import Footer from '../Components/Footer/Footer';
 
 class App extends Component {
   render(){
@@ -16,11 +16,13 @@ class App extends Component {
           <Route exact path="/" render={props =>(
             <React.Fragment>
               <UploadButtons/>
-              <HowToUse/>
+              {/* <div className="content"> */}
+                <HowToUse/>
+              {/* </div> */}
             </React.Fragment>
           )}>          
           </Route>
-            <Route path="/FAQ" component={Faq}></Route>
+            <Route path="/FAQ" component={FaqPage}></Route>
             <Route path="/Upload" component={UploadPage}></Route>
             <Footer/>
         </React.Fragment>

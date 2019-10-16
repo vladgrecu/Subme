@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import Message from './Message';
-import Overlay from './Overlay';
+import Message from '../Message/Message';
+import Overlay from '../Overlay/Overlay';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileUpload } from '@fortawesome/free-solid-svg-icons';
 
-const FileUpload = ({props}) => {
+const FileUpload = ({selectedOptionTo,selectedOptionFrom}) => {
+  console.log('From',selectedOptionFrom);
+  console.log('TO',selectedOptionTo);
   const [overlay, setOverlay] = useState(false);
   const [file, setFile] = useState('');
   const [filename, setFileName] = useState('No file');
@@ -22,8 +24,8 @@ const FileUpload = ({props}) => {
     event.preventDefault();
     
     const formData = new FormData();
-    formData.append('fromlang',`${props.selectedOptionFrom}`);
-    formData.append('tolang',`${props.selectedOptionTo}`);
+    formData.append('fromlang',`${selectedOptionFrom}`);
+    formData.append('tolang',`${selectedOptionTo}`);
     formData.append('upload',file);
 
     try{

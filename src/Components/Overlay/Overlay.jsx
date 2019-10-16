@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Styles/overlay.css';
+import './overlay.css';
 
 const Overlay = ({percentage,message})=> {
   return (

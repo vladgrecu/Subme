@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Select from 'react-select-v2';
-import HowToUse from './HowToUse'
-import '../Styles/uploadpage.css'
-import FileUpload from './FileUpload';
+import HowToUse from '../../Components/HowToUse/HowToUse'
+import './uploadpage.css'
+import FileUpload from '../../Components/FileUpload/FileUpload';
 
 class UploadPage extends Component{
   constructor(){
@@ -28,8 +28,7 @@ class UploadPage extends Component{
       for (let i in languages.availableTranslateLangs){
         resultTo.push([i,languages.availableTranslateLangs[i]])
       }
-      this.setState({transcribeLang: resultFrom});
-      this.setState({translateLang: resultTo});
+      this.setState({transcribeLang: resultFrom, translateLang:resultTo});
     })
   }
 
@@ -74,7 +73,7 @@ class UploadPage extends Component{
                 />
               </div>
             </div>
-          <FileUpload props={this.state} />
+          <FileUpload selectedOptionFrom={this.state.selectedOptionFrom} selectedOptionTo={this.state.selectedOptionTo}/>
           </div>
           <HowToUse/>
         </div>
