@@ -10,7 +10,7 @@ const FileUpload = ({selectedOptionTo,selectedOptionFrom}) => {
   console.log('TO',selectedOptionTo);
   const [overlay, setOverlay] = useState(false);
   const [file, setFile] = useState('');
-  const [filename, setFileName] = useState('No file');
+  const [filename, setFileName] = useState('No file selected');
   const [message, setMessage] = useState('');
   const [backgroundColor, setBackgroundColor] = useState('serverMessage');
   const [uploadPercentage, setUploadPercentage] = useState(0);

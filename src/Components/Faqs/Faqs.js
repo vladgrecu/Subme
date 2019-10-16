@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Faqs({faq, index, toggleFaq}) {
-  // console.log(faq)
   return (
     <div 
       className={"faq " + (faq.open ? 'open': '')}

@@ -5,9 +5,9 @@ body{
 }
 .content{
   margin: auto;
-  padding-top: 85px;
+  padding-top: 45px;
   background-color:  rgb(95, 95, 95);
-  padding-bottom: 90px;
+  padding-bottom: 50px;
   box-shadow: 0 4px 2px -1px gray;
   font-family: sans-serif;
   width: 90%;

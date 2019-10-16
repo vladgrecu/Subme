@@ -21,12 +21,12 @@ function Faq(){
     },
     {
       question: 'Can I use the app with any kind of audio/video file?',
-      answer: 'The process should work for any kind of audio/video file. If you encounter problems, please let us know and it return, we will let you use the app for free for a total file length of 240 minutes',
+      answer: 'The process should work for any kind of audio/video file. If you encounter problems, please let us know and it return, we will let you use the app for free for a total file length of 240 minutes.',
       open:false
     },
     {
       question: 'Is the app available for mobile use aswell',
-      answer: 'You can use the app on all platforms',
+      answer: 'You can use the app on all platforms.',
       open: false
     }
   ]);
@@ -46,8 +46,7 @@ function Faq(){
     <React.Fragment>
       <div className="content">
         <div className="info-container">
-          <h1 className="uploadTitle">FAQ</h1>
-          <p>In this section we try to answer any questions that you may have about our services</p>
+          <h3 className="faq-title">In this section we try to answer any questions that you may have about our services.</h3>
           <div className="faqs">
             {faqs.map((faq, i) => (
               <Faqs faq={faq} index={i} toggleFaq={toggleFaq} key={i}/>
